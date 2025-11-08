@@ -1,0 +1,13 @@
+import { Platform } from "react-native";
+
+// Change "192.168.x.x" to your computer's local IP if testing on a real device
+
+let baseURL = "http://localhost:4000"; // default for web & iOS
+
+if (Platform.OS === "android") {
+  baseURL = "http://10.0.2.2:4000"; // Android emulator
+}
+
+// baseURL = "http://192.168.x.x:4000";
+
+export const API_BASE_URL = baseURL;
